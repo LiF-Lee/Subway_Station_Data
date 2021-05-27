@@ -1,4 +1,6 @@
 {
+    "lastUpdated": "21-05-27",
+    "Github": "https://raw.githubusercontent.com/EliF-Lee/Subway_Station_Data/main/stationData.json",
     "stations": {
         "국제업무지구": {
             "id": "SES3145",
