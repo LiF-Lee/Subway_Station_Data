@@ -5,16 +5,15 @@ const stationData = readData();
 
 function readData() 
 {
-    // Read Data from Github
+    /* Read Data from Github */
     let url = "https://raw.githubusercontent.com/EliF-Lee/Subway_Station_Data/main/stationData.json";
     let webData = org.jsoup.Jsoup.connect(url).get().text(); 
     return JSON.parse(webData);
 
-    /* Read Data from File
-    let path = "sdcard/example/stationData.json";
-    let fileData = FileStream.read(path);
-    return JSON.parse(fileData);
-    */
+    /* Read Data from File */
+    // let path = "sdcard/example/stationData.json";
+    // let fileData = FileStream.read(path);
+    // return JSON.parse(fileData);
 }
 
 function getArrivalData(id) 
