@@ -5,12 +5,12 @@ const stationData = readData();
 
 function readData() 
 {
-    // 웹에서 데이터 읽어오기
+    // Read Data from Github
     let url = "https://raw.githubusercontent.com/EliF-Lee/Subway_Station_Data/main/stationData.json";
     let webData = org.jsoup.Jsoup.connect(url).get().text(); 
     return JSON.parse(webData);
 
-    /* 파일에서 데이터 읽어오기
+    /* Read Data from File
     let path = "sdcard/example/stationData.json";
     let fileData = FileStream.read(path);
     return JSON.parse(fileData);
@@ -26,7 +26,6 @@ function getArrivalData(id)
 
 function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) 
 {
-    // 출력/처리 부분은 직접 수정해서 사용하세요.
     if (msg.startsWith("#실시간 "))
     {
         let id = stationData.stations[msg.slice(5)].id[0];
